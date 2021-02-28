@@ -33,15 +33,15 @@ const VueNativeNotification = {
     options = options || {}
     options.requestOnNotify = options.requestOnNotify || true
 
-    Vue.notification = {}
-    Vue.prototype.$notification = {}
+    Vue.nativenotification = {}
+    Vue.prototype.$nativenotification = {}
 
     // Manual permission request
     var requestPermission = function () {
       return Notification.requestPermission()
     }
-    Vue.notification.requestPermission = requestPermission
-    Vue.prototype.$notification.requestPermission = requestPermission
+    Vue.nativenotification.requestPermission = requestPermission
+    Vue.prototype.$nativenotification.requestPermission = requestPermission
 
     // Show function
     var show = function (title, opts, e) {
@@ -110,8 +110,8 @@ const VueNativeNotification = {
           }
         })
     }
-    Vue.notification.show = show
-    Vue.prototype.$notification.show = show
+    Vue.nativenotification.show = show
+    Vue.prototype.$nativenotification.show = show
   }
 }
 

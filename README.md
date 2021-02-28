@@ -35,7 +35,7 @@ export default {
   methods: {
     notify () {
       // https://developer.mozilla.org/en-US/docs/Web/API/Notification/Notification#Parameters
-      this.$notification.show('Hello World', {
+      this.$nativenotification.show('Hello World', {
         body: 'This is an example!'
       }, {})
     }
@@ -53,11 +53,11 @@ You can manually request users permission with:
 
 ```javascript
 // Global
-Vue.notification.requestPermission()
+Vue.nativenotification.requestPermission()
   .then(console.log) // Prints "granted", "denied" or "default"
 
 // Component
-this.$notification.requestPermission()
+this.$nativenotification.requestPermission()
   .then(console.log)
 ```
 
@@ -114,7 +114,7 @@ const notification = {
     }
   }
 }
-this.$notification.show(notification.title, notification.options, notification.events)
+this.$nativenotification.show(notification.title, notification.options, notification.events)
 ```
 
 ## License
